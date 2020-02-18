@@ -1,0 +1,8 @@
+#!/bin/bash
+
+STATUS=$(cat /sys/class/leds/led1/brightness)
+if (($STATUS== 0))
+then sudo sh -c 'echo 1 > /sys/class/leds/led1/brightness'
+else 
+sudo sh -c 'echo 0 > /sys/class/leds/led1/brightness'
+fi
